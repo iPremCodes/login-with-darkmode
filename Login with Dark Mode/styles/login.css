@@ -1,0 +1,410 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins';
+}
+
+* a {
+  text-decoration: none;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+body .loginTop .LightModeToggle {
+  display: none;
+}
+
+.DarkMode {
+  color: #FFFFFF;
+  background: #171123;
+}
+
+.DarkMode .loginRight .loginRightHead p span {
+  color: #FFFFFF;
+  font-weight: 500;
+}
+
+.DarkMode .loginLeft .loginEmail input, .DarkMode .loginLeft .loginPassword input {
+  background: #171123;
+  color: #FFFFFF;
+}
+
+.DarkMode .loginMain .loginLeft #authGoogle {
+  border: none;
+}
+
+.DarkMode .addDarkMode {
+  display: none;
+}
+
+.DarkMode .loginTop .LightModeToggle {
+  display: block;
+}
+
+.loginTop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+}
+
+.loginTop a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.loginMain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 2rem;
+  -webkit-transform: translateY(3rem);
+          transform: translateY(3rem);
+}
+
+.loginLeft {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  grid-gap: 1rem;
+}
+
+.loginLeft .loginLeftHead h1 {
+  font-size: 1.5rem;
+}
+
+.loginLeft .loginLeftHead p {
+  color: #8E8E8E;
+}
+
+.loginLeft .loginPassword {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.loginLeft .loginPassword a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.loginLeft .loginEmail, .loginLeft .loginPassword {
+  border: 1px solid #8E8E8E;
+  padding: 1rem;
+  border-radius: 0.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  grid-gap: 0.5rem;
+}
+
+.loginLeft .loginEmail div, .loginLeft .loginPassword div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.loginLeft .loginEmail a img, .loginLeft .loginPassword a img {
+  position: relative;
+}
+
+.loginLeft .loginEmail hr, .loginLeft .loginPassword hr {
+  border: 1px solid #8E8E8E;
+  margin: 0 1rem;
+}
+
+.loginLeft .loginEmail label, .loginLeft .loginPassword label {
+  color: #8E8E8E;
+  text-align: left;
+  width: 100%;
+}
+
+.loginLeft .loginEmail input, .loginLeft .loginPassword input {
+  border: none;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: left;
+  width: 100%;
+}
+
+.loginLeft .loginEmail input:focus, .loginLeft .loginPassword input:focus {
+  outline: none;
+}
+
+.loginLeft .loginEmail ::-webkit-input-placeholder, .loginLeft .loginPassword ::-webkit-input-placeholder {
+  font-weight: 400;
+  text-align: left;
+}
+
+.loginLeft .loginEmail :-ms-input-placeholder, .loginLeft .loginPassword :-ms-input-placeholder {
+  font-weight: 400;
+  text-align: left;
+}
+
+.loginLeft .loginEmail ::-ms-input-placeholder, .loginLeft .loginPassword ::-ms-input-placeholder {
+  font-weight: 400;
+  text-align: left;
+}
+
+.loginLeft .loginEmail ::placeholder, .loginLeft .loginPassword ::placeholder {
+  font-weight: 400;
+  text-align: left;
+}
+
+.loginLeft a {
+  color: #4800E1;
+  font-weight: 600;
+  text-align: right;
+}
+
+.loginLeft button {
+  font-size: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 600;
+  padding: 0.5rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-gap: 1rem;
+  cursor: pointer;
+}
+
+.loginLeft button svg {
+  width: 25px;
+}
+
+.loginLeft #loginGo {
+  background: #E3D6FF;
+  border: 1px solid #4800E1;
+  color: #4800E1;
+  border-radius: 0.5rem;
+}
+
+.loginLeft #loginGo:hover {
+  background: #4800E1;
+  color: #FFFFFF;
+  -webkit-transition: 100ms ease-in-out;
+  transition: 100ms ease-in-out;
+}
+
+.loginLeft #loginGo:hover path {
+  fill: #FFFFFF;
+}
+
+.loginLeft #authGoogle {
+  background: #4800E1;
+  border: 1px solid #E3D6FF;
+  color: #FFFFFF;
+  border-radius: 0.5rem;
+}
+
+.loginLeft #authGoogle:hover {
+  background: #E3D6FF;
+  color: #4800E1;
+  -webkit-transition: 100ms ease-in-out;
+  transition: 100ms ease-in-out;
+  border: 1px solid #4800E1;
+}
+
+.loginLeft #authGoogle:hover path {
+  fill: #4800E1;
+}
+
+hr {
+  border: 1px solid #4800E1;
+}
+
+.loginRight {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  grid-gap: 3rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.loginRight .loginRightHead {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.loginRight .loginRightHead h1 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 1.5rem;
+}
+
+.loginRight .loginRightHead p {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #8E8E8E;
+}
+
+.loginRight .loginRightHead p span {
+  color: #000;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+.rightSunAnimation img {
+  position: absolute;
+  right: -8rem;
+  z-index: -2;
+}
+
+.UpSunAnimation {
+  -webkit-animation: SunRightAnimation 1s ease;
+          animation: SunRightAnimation 1s ease;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+@-webkit-keyframes SunRightAnimation {
+  from {
+    top: 100%;
+    opacity: 1;
+  }
+  to {
+    top: -60%;
+    opacity: 0;
+  }
+}
+
+@keyframes SunRightAnimation {
+  from {
+    top: 100%;
+    opacity: 1;
+  }
+  to {
+    top: -60%;
+    opacity: 0;
+  }
+}
+
+.DownSunAnimation {
+  -webkit-animation: SunRightAnimation1 1s ease;
+          animation: SunRightAnimation1 1s ease;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+@-webkit-keyframes SunRightAnimation1 {
+  from {
+    top: -60%;
+    opacity: 0;
+  }
+  to {
+    top: 75%;
+    opacity: 1;
+  }
+}
+
+@keyframes SunRightAnimation1 {
+  from {
+    top: -60%;
+    opacity: 0;
+  }
+  to {
+    top: 75%;
+    opacity: 1;
+  }
+}
+
+.rightMoonAnimation img {
+  position: absolute;
+  right: -8rem;
+  top: -25rem;
+  z-index: -2;
+}
+
+.DownMoonAnimation {
+  -webkit-animation: MoonAnimation 1s ease;
+          animation: MoonAnimation 1s ease;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+@-webkit-keyframes MoonAnimation {
+  from {
+    top: -60%;
+    opacity: 0;
+  }
+  to {
+    top: 60%;
+    opacity: 1;
+  }
+}
+
+@keyframes MoonAnimation {
+  from {
+    top: -60%;
+    opacity: 0;
+  }
+  to {
+    top: 60%;
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .divider, .loginRight {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .loginLeft .loginEmail div, .loginLeft .loginPassword div {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 451px) {
+  .loginLeft .loginEmail div, .loginLeft .loginPassword div {
+    width: 40%;
+  }
+}
+/*# sourceMappingURL=login.css.map */

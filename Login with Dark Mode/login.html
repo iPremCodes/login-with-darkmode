@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/login.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <title>Login - WTS</title>
+</head>
+<body>
+
+
+        <div class="loginTop">
+            <a href="#"><img src="./assets/back-icon.svg" alt="" width="40px"></a>
+            <a href="#" onclick="addDarkMode()" class="addDarkMode"><img src="./assets/night-icon-for-dark-mode.svg" alt="" width="150px"></a>
+            <a href="#" onclick="removeDarkMode()" class="LightModeToggle"><img src="./assets/light-icon-for-day-mode.svg" alt="" width="150px"></a>
+
+        </div>
+
+        
+        <div class="loginMain">
+          
+  
+        <div class="loginLeft">
+    <div class="loginLeftHead">
+    <h1>Login to Dashboard</h1>
+    <p>Get access to multiple services at once.</p>
+    </div>
+
+    <div class="loginEmail">
+        <div>  <label for="email">Email ID</label> <hr></div>
+    <input type="email" placeholder="Enter your Email">
+    </div>
+
+    
+    <div class="loginPassword">
+    <div><label for="password">Password</label><hr></div>
+    <input type="password" id="passwordInput" placeholder="Enter your Password">
+   <a onclick="passwordToggle()" href="#"><img class="eyeOpen" src="./assets/eye-icon.svg" alt="" width="20px"><img class="eyeClose" src="./assets/eye-close.svg" alt="" style="display: none;" width="20px"></a>
+</div>
+
+    <a href="#">Forgot Password?</a>
+
+    <button id="loginGo" href="#">
+        <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.3144 16.074H2.97754C3.69055 8.86835 9.77108 3.23987 17.1664 3.23987C25.0423 3.23987 31.4265 9.62414 31.4265 17.5C31.4265 25.3759 25.0423 31.7602 17.1664 31.7602C9.7725 31.7602 3.69197 26.1317 2.97754 18.926H14.3144V23.2041L21.4444 17.5L14.3144 11.796V16.074Z" fill="#4800E1"/>
+</svg>
+
+        Login</button>
+    <button id="authGoogle" href="#">
+        <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_24_2307)">
+            <path d="M5.21693 11.8398C6.48733 9.3101 8.43623 7.18351 10.8458 5.69776C13.2554 4.212 16.0306 3.42562 18.8615 3.42651C22.9765 3.42651 26.4334 4.93816 29.0765 7.40413L24.6989 11.7833C23.1154 10.2702 21.103 9.49906 18.8615 9.49906C14.8838 9.49906 11.517 12.1864 10.3184 15.7945C10.013 16.7107 9.8389 17.6879 9.8389 18.6957C9.8389 19.7034 10.013 20.6807 10.3184 21.5968C11.5185 25.2065 14.8838 27.8923 18.8615 27.8923C20.9152 27.8923 22.6635 27.3503 24.0316 26.4341C24.8247 25.9119 25.5037 25.2343 26.0276 24.4422C26.5514 23.6502 26.9092 22.7601 27.0793 21.8259H18.8615V15.9197H33.242C33.4221 16.9184 33.5199 17.9597 33.5199 19.0423C33.5199 23.6933 31.8555 27.6083 28.9666 30.2651C26.4411 32.5983 22.9841 33.9649 18.8615 33.9649C16.8561 33.9657 14.8701 33.5713 13.0172 32.8042C11.1643 32.0371 9.48076 30.9124 8.06273 29.4944C6.6447 28.0764 5.52001 26.3928 4.75295 24.5399C3.98588 22.687 3.59148 20.7011 3.59229 18.6957C3.59229 16.2312 4.18168 13.9012 5.21693 11.8398Z" fill="white"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_24_2307">
+            <rect width="36.646" height="36.646" fill="white" transform="translate(0.53833 0.372681)"/>
+            </clipPath>
+            </defs>
+            </svg>
+            
+        Login with Google</button>
+</div>
+
+
+<hr class="divider">
+
+
+<div class="loginRight">
+    <div class="loginRightHead">
+        <h1>Multiple Solutions Delivered</h1> 
+        <p>straight towards your <span>internet devices</span></p>
+        </div>
+
+        <img src="./assets/right-img-login.svg" alt="" width="450px">
+</div>
+
+</div>
+
+
+<script>
+
+function removeDarkMode() {
+
+    setTimeout( function (){
+ 
+ $(".SunImg").fadeIn('slow');
+ }, 100);
+
+  const removeDarkMode = document.querySelector("body");
+  removeDarkMode.classList.remove("DarkMode");
+  
+ // Light Mode Sun Animation   
+  const sunImg = document.querySelector(".SunImg");
+  sunImg.classList.remove("UpSunAnimation");
+  sunImg.classList.add("DownSunAnimation");
+
+// Light Mode Moon Animation   
+const MoonImg = document.querySelector(".MoonImg");
+  MoonImg.classList.remove("DownMoonAnimation");
+  MoonImg.classList.add("UpMoonAnimation");
+
+}
+function addDarkMode() {
+    const addDarkMode = document.querySelector("body");
+    addDarkMode.classList.add("DarkMode");
+
+    // DarkMode Sun Animation'
+    const sunImg = document.querySelector(".SunImg");
+    sunImg.classList.add("UpSunAnimation");
+    sunImg.classList.remove("DownSunAnimation");
+
+    
+    setTimeout( function (){
+  $(".SunImg").fadeOut('slow');
+}, 100);
+  
+   
+    
+    // DarkMode Moon Animation
+    const moonImg = document.querySelector(".MoonImg");
+    moonImg.classList.add("DownMoonAnimation");
+    moonImg.classList.remove("UpMoonAnimation");
+
+
+    
+    
+}
+
+
+</script>
+<script src="./js/login.js"></script>
+
+
+</body>
+</html>
